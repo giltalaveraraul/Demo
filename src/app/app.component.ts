@@ -7,14 +7,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  starshipData = {} as any;
-  private url = 'https://swapi.dev/api/starships/10/';
+
+  who = {} as any;
+
+  private helloUrl = 'http://localhost:8999/me';
 
   constructor(private http: HttpClient) {}
 
-  getStarship() {
-    this.http.get(this.url).subscribe(data => {
-      this.starshipData = data;
-    });
+  whoAreYou(){
+    this.http.get(this.helloUrl).subscribe(data => {
+      this.who =data;
+    },
+    error => {
+      console.log(error);
+      this.who = {"name":"world"};
+    })
   }
 }
