@@ -1,0 +1,12 @@
+<section class="page">
+  <h3>Publicación de frontales y ciclo de vida post-build</h3>
+
+  <p>
+    <button (click)="getStarship()">Get Starship</button>
+  </p>
+
+  <h4>Starship data</h4>
+  <p *ngIf="starshipData?.name">
+    {{starshipData.name}}
+  </p>
+</section>
