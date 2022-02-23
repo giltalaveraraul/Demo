@@ -2,11 +2,11 @@
   <h3>Publicación de frontales y ciclo de vida post-build</h3>
 
   <p>
-    <button (click)="getStarship()">Get Starship</button>
+    <button (click)="whoAreYou()">Saluda</button>
   </p>
 
-  <h4>Starship data</h4>
-  <p *ngIf="starshipData?.name">
-    {{starshipData.name}}
+  <h4>Bienvenidos</h4>
+  <p *ngIf="who?.name">
+    Hello {{who.name}}!
   </p>
 </section>
