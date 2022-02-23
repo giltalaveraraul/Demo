@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,12 @@ export class AppComponent {
 
   who = {} as any;
 
-  private helloUrl = 'http://localhost:8999/me';
+  
 
   constructor(private http: HttpClient) {}
 
   whoAreYou(){
-    this.http.get(this.helloUrl).subscribe(data => {
+    this.http.get(environment.url).subscribe(data => {
       this.who =data;
     },
     error => {
