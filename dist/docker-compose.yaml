@@ -5,4 +5,7 @@ services:
       context: ./
       dockerfile: ./Dockerfile 
     ports:
-      - "8998:80"      
+      - "8998:80"
+    environment:
+      WHO_URL: http://localhost:8999/develop/me
+#      WHO_URL: http://localhost:8999/production/me      
