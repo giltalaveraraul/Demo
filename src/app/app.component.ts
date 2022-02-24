@@ -13,7 +13,7 @@ import { Config, ConfigService } from './config/config.service';
 export class AppComponent {
   error: any;
   who = {} as any;
-  config: Config |undefined;
+  config: Config |any;
 
   
 
@@ -31,6 +31,7 @@ export class AppComponent {
         error => {
           console.log(error);
           this.who = {"name":"world"};
+          this.config = {"instance":"Imaginary instance","whoUrl":"anyUrl"};
         })
       }, // error path // success path
       error: error => {
