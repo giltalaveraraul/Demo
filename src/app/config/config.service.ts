@@ -7,6 +7,7 @@ import { catchError, retry } from 'rxjs/operators';
 
 export interface Config {
   whoUrl: string;
+  instance: string;
 }
 
 @Injectable()
