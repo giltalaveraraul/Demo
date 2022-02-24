@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  hello-nginx:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile 
+    ports:
+      - "8998:80"
+    environment:
+      WHO_URL: http://localhost:8999/develop/me
+      INSTANCE: localDockerInstance
+#      WHO_URL: http://localhost:8999/production/me      
